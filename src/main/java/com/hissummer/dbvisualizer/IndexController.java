@@ -21,7 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*")
 @Controller
 public class IndexController  {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private ApplicationContext appContext;

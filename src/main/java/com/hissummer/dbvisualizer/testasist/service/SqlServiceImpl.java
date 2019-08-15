@@ -32,12 +32,12 @@ public class SqlServiceImpl {
 
 		MysqlDataSource dataSource = new MysqlDataSource();
 
-//		dataSource.setServerName(EnvConfig.envMap.get(env).serviceDbConf.get(service)[0]);
-//		dataSource.setPort(3306);// 端口默认写死3306
-//		dataSource.setDatabaseName(EnvConfig.envMap.get(env).serviceDbConf.get(service)[1]);
-//		dataSource.setUser(EnvConfig.envMap.get(env).serviceDbConf.get(service)[2]);
-//		dataSource.setPassword(EnvConfig.envMap.get(env).serviceDbConf.get(service)[3]);
-//		dataSource.setCharacterEncoding("UTF-8");
+		// dataSource.setServerName(EnvConfig.envMap.get(env).serviceDbConf.get(service)[0]);
+		// dataSource.setPort(3306);// 端口默认写死3306
+		// dataSource.setDatabaseName(EnvConfig.envMap.get(env).serviceDbConf.get(service)[1]);
+		// dataSource.setUser(EnvConfig.envMap.get(env).serviceDbConf.get(service)[2]);
+		// dataSource.setPassword(EnvConfig.envMap.get(env).serviceDbConf.get(service)[3]);
+		// dataSource.setCharacterEncoding("UTF-8");
 
 		return dataSource;
 

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.hissummer.dbvisualizer.dataplatform.DataplatformRequestVo;
+import com.hissummer.dbvisualizer.dataplatform.service.DataplatformServiceImpl;
 import com.hissummer.dbvisualizer.testasist.requestVo.SqlRequestVo;
 import com.hissummer.dbvisualizer.testasist.requestVo.SqlResponseVo;
 import com.hissummer.dbvisualizer.testasist.service.SqlServiceImpl;
@@ -21,11 +24,14 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*")
 @Controller
 @RequestMapping("/api")
-public class TestAsistorController {
+public class DataPlatformController {
 
 	@Autowired
 	SqlServiceImpl sqlServiceImpl;
 
+	@Autowired
+	DataplatformServiceImpl dataplatformServiceImpl;	
+	
 	@PostMapping(value = "/sql/{env}/{service}")
 	@ResponseBody
 	public SqlResponseVo sql(@PathVariable("env") String env, @PathVariable("service") String service,
@@ -44,13 +50,14 @@ public class TestAsistorController {
 
 	}
 
-	@GetMapping(value = "/mongodb/{env}")
+
+	@PostMapping(value = "/dataplatform/mongodbruncommand")
 	@ResponseBody
-	public ResponseEntity<String> mongodb(@PathVariable("env") String env) {
+	public ResponseEntity<String> runCommand(@RequestBody DataplatformRequestVo dataplatformRequestVo) {
 
-		log.info(env);
-
-		return new ResponseEntity<>("OK", HttpStatus.OK);
+		log.info(dataplatformRequestVo.getCommand());
+		String response = dataplatformServiceImpl.runCommand(dataplatformRequestVo.getCommand());
+		return new ResponseEntity<>(response, HttpStatus.OK);
 
 	}
 
