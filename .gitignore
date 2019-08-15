@@ -24,3 +24,7 @@ hs_err_pid*
 
 target/
 catalina.base_IS_UNDEFINED/
+
+.classpath
+.project
+.settings/
