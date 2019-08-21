@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.controller;
+package com.hissummer.dbvisualizer.dataplatform.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
