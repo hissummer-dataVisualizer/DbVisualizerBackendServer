@@ -7,4 +7,8 @@ public class DataplatformRequestVo {
 
 	String command;
 
+	String dataSourceId;
+	
+	
+	
 }
