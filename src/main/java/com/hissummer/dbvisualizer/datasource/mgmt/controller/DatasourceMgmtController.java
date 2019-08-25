@@ -1,5 +1,6 @@
-package com.hissummer.dbvisualizer.datasource.mgmt;
+package com.hissummer.dbvisualizer.datasource.mgmt.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.hissummer.dbvisualizer.datasource.mgmt.service.DatasourceMgmtService;
+import com.hissummer.dbvisualizer.datasource.mgmt.vo.Datasource;
+import com.hissummer.dbvisualizer.datasource.mgmt.vo.DatasourceMgmtResponseVo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,6 +25,10 @@ import lombok.extern.slf4j.Slf4j;
 public class DatasourceMgmtController {
 	
 	
+	@Autowired
+	DatasourceMgmtService datasourceMgmtService;
+	
+	
 	/**
 	 * 
 	 * @param 
@@ -28,21 +36,18 @@ public class DatasourceMgmtController {
 	 */
 	@PostMapping(value = "/datasource")
 	@ResponseBody
-	public Object updateDatasource(
+	public DatasourceMgmtResponseVo updateDatasource(
 		
 		@RequestBody Datasource datasource) {
 
-		log.info(datasource.toString());
 
-		// sqlResponseVo.
-		return null;
-		// return new ResponseEntity<>(sqlResponseVo, HttpStatus.OK);
-
+		return datasourceMgmtService.update(datasource);
+		
 	}
 	
 	@PutMapping(value = "/datasource")
 	@ResponseBody
-	public Object addDatasource(
+	public DatasourceMgmtResponseVo addDatasource(
 		
 		@RequestBody Datasource datasource) {
 
@@ -57,7 +62,7 @@ public class DatasourceMgmtController {
 
 	@DeleteMapping(value = "/datasource")
 	@ResponseBody
-	public Object delDatasource(
+	public DatasourceMgmtResponseVo delDatasource(
 		
 		@RequestBody Datasource datasource) {
 
@@ -71,7 +76,7 @@ public class DatasourceMgmtController {
 	
 	@GetMapping(value = "/datasource")
 	@ResponseBody
-	public Object getDatasources(
+	public DatasourceMgmtResponseVo getDatasources(
 		
 		@RequestBody Datasource datasource) {
 

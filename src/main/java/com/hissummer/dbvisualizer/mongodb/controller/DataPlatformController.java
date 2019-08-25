@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.dataplatform.controller;
+package com.hissummer.dbvisualizer.mongodb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.hissummer.dbvisualizer.dataplatform.DataplatformRequestVo;
-import com.hissummer.dbvisualizer.dataplatform.service.DataplatformServiceImpl;
-import com.hissummer.dbvisualizer.testasist.requestVo.SqlRequestVo;
-import com.hissummer.dbvisualizer.testasist.requestVo.SqlResponseVo;
-import com.hissummer.dbvisualizer.testasist.service.SqlServiceImpl;
+import com.hissummer.dbvisualizer.mongodb.DataplatformRequestVo;
+import com.hissummer.dbvisualizer.mongodb.service.DataplatformServiceImpl;
+import com.hissummer.dbvisualizer.sqldatabase.requestVo.SqlRequestVo;
+import com.hissummer.dbvisualizer.sqldatabase.requestVo.SqlResponseVo;
+import com.hissummer.dbvisualizer.sqldatabase.service.SqlServiceImpl;
 
 import lombok.extern.slf4j.Slf4j;
 

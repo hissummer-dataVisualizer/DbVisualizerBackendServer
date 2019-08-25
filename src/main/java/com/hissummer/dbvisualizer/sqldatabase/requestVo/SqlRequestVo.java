@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.testasist.requestVo;
+package com.hissummer.dbvisualizer.sqldatabase.requestVo;
 
 import lombok.Data;
 

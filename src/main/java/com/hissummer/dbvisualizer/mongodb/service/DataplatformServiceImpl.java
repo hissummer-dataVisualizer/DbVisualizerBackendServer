@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.dataplatform.service;
+package com.hissummer.dbvisualizer.mongodb.service;
 
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;

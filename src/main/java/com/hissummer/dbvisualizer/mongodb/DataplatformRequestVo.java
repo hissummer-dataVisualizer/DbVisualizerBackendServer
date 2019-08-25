@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.dataplatform;
+package com.hissummer.dbvisualizer.mongodb;
 
 import lombok.Data;
 
