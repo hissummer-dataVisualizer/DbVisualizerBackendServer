@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class DataplatformServiceImpl {
+public class MongodbServiceImpl {
 
 	@Autowired
 	MongoTemplate mongoTemplate;

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hissummer.dbvisualizer.mongodb.DataplatformRequestVo;
-import com.hissummer.dbvisualizer.mongodb.service.DataplatformServiceImpl;
+import com.hissummer.dbvisualizer.mongodb.service.MongodbServiceImpl;
 import com.hissummer.dbvisualizer.mysql.requestVo.SqlRequestVo;
 import com.hissummer.dbvisualizer.mysql.requestVo.SqlResponseVo;
 import com.hissummer.dbvisualizer.mysql.service.SqlServiceImpl;
@@ -30,25 +30,7 @@ public class DataPlatformController {
 	SqlServiceImpl sqlServiceImpl;
 
 	@Autowired
-	DataplatformServiceImpl dataplatformServiceImpl;	
-	
-	@PostMapping(value = "/sql/{env}/{service}")
-	@ResponseBody
-	public SqlResponseVo sql(@PathVariable("env") String env, @PathVariable("service") String service,
-			@RequestBody SqlRequestVo sqlRequestVo) {
-
-		log.info(sqlRequestVo.getEnv());
-		log.info(env);
-
-		log.info(sqlRequestVo.toString());
-
-		SqlResponseVo sqlResponseVo = sqlServiceImpl.runSql(env, service, sqlRequestVo.getSql());
-		log.info(sqlResponseVo.toString());
-		// sqlResponseVo.
-		return sqlResponseVo;
-		// return new ResponseEntity<>(sqlResponseVo, HttpStatus.OK);
-
-	}
+	MongodbServiceImpl dataplatformServiceImpl;	
 
 
 	@PostMapping(value = "/dataplatform/mongodbruncommand")
