@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hissummer.dbvisualizer.mongodb.DataplatformRequestVo;
 import com.hissummer.dbvisualizer.mongodb.service.DataplatformServiceImpl;
-import com.hissummer.dbvisualizer.sqldatabase.requestVo.SqlRequestVo;
-import com.hissummer.dbvisualizer.sqldatabase.requestVo.SqlResponseVo;
-import com.hissummer.dbvisualizer.sqldatabase.service.SqlServiceImpl;
+import com.hissummer.dbvisualizer.mysql.requestVo.SqlRequestVo;
+import com.hissummer.dbvisualizer.mysql.requestVo.SqlResponseVo;
+import com.hissummer.dbvisualizer.mysql.service.SqlServiceImpl;
 
 import lombok.extern.slf4j.Slf4j;
 

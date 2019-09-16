@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.sqldatabase.requestVo;
+package com.hissummer.dbvisualizer.mysql.requestVo;
 
 import com.alibaba.fastjson.JSONArray;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

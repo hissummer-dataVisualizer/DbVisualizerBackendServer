@@ -1,4 +1,4 @@
-package com.hissummer.dbvisualizer.sqldatabase.service;
+package com.hissummer.dbvisualizer.mysql.service;
 
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.hissummer.dbvisualizer.sqldatabase.requestVo.SqlResponseVo;
+import com.hissummer.dbvisualizer.mysql.requestVo.SqlResponseVo;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.ResultSetMetaData;
 import com.mysql.jdbc.Statement;
